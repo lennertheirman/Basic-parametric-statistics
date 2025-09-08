@@ -2,5 +2,16 @@
 title: "FSS 2025 Basic Parametric Statistics Session 1"
 author: "Lennert Heirman"
 date: "`r Sys.Date()`"
-output: html_document
+output: 
+  html_document: 
+    toc: true
+    number_sections: true
 ---
+# Set up
+```{r}
+setwd("C:/R_Projects/Flames summer school 2025/Basic parametric statistics")
+
+library(ggplot2)
+library(lattice)
+```
+
