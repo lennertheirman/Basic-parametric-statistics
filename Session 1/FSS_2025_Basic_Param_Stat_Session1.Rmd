@@ -9,9 +9,182 @@ output:
 ---
 # Set up
 ```{r}
-setwd("C:/R_Projects/Flames summer school 2025/Basic parametric statistics")
+setwd("C:/R_Projects/Flames summer school 2025/Basic parametric statistics/Session 1")
 
 library(ggplot2)
 library(lattice)
+```
+
+# Import Data Set
+```{r}
+tbad <- library(readr)
+tbad <- read.delim("TBAD.txt")
+head(tbad)
+View(tbad)
+str(tbad)
+```
+
+# Structure data and do transformations
+```{r}
+tbad$Secondary.specialty<-factor(tbad$Secondary.specialty,
+ levels=0:1,labels=c("no","yes"))
+tbad$Certification.level<-factor(tbad$Certification.level)
+tbad$Gender=factor(tbad$Gender,
+ levels=0:1,labels=c("man","woman"))
+tbad$Medical.school<-factor(tbad$Medical.school,
+ levels=0:1,labels=c("USA","Foreign"))
+tbad$Residence<-factor(tbad$Residence,
+ levels=0:1,labels=c("USA","Foreign"))
+str(tbad)
+tbad$Specialty <- as.factor(tbad$Specialty)
+attach(tbad)
+```
+
+# Exploratory Analysis
+
+# Categorical variables
+```{r}
+# Frequency tables and plots for nominal/ordinal data:
+tab<-table(Specialty)
+tabp<-prop.table(tab)
+ft <- rbind(tab, tabp, cumsum(tab), cumsum(tabp))			
+# The cumulatives are given so you know how to do it, 
+# but are of course only of interest 
+# when you work with ordinal data
+ft2<- t(ft)  #transport data (columns become rows)
+colnames(ft2) <- c("freq","percent",
+                  "cumul freq","cumul percent")
+round(ft2, 2)  #only 2 decimals
+
+barplot(tab,main="Barplot for Specialty", 
+ xlab="Specialty", ylab="Frequency",ylim=c(0,70))
+
+barplot(tab,main="Barplot for Specialty", 
+ xlab="Frequency", ylab="Specialty",xlim=c(0,60),horiz=T,col="orange")
+
+pie(tab,main="Pie chart for Specialty",col=1:7)
+
+# Create percentages on piechart solution ChatGPT
+pct <- round(tab / sum(tab) * 100)
+labels <- paste(names(tab), pct, "%")
+pie(tab,
+    labels = labels,
+    main = "Pie chart for Specialty",
+    col = 1:7)
+
+# create perentages on piechart solution in lesson through google
+library(lessR)
+cat <- data.frame(Specialty)
+cols <-  hcl.colors(length(levels(Specialty)), "Fall")
+PieChart(Specialty, data = tbad, hole = 0,
+         fill = cols,
+         labels_cex = 0.6)
+```
+
+# Numerical data
+```{r}
+# Histogram
+hist(tbad$Years.of.experience,main="",
+ xlab="Experience (years)",
+ ylab="Frequency",col="blue");box()
+ # optional
+ hist(tbad$Years.of.experience,main="",
+  xlab="Experience (years)",
+  ylab="Frequency",col="blue",
+  breaks=20);box()
+ 
+  hist(tbad$Years.of.experience,main="",
+  xlab="Experience (years)",
+  ylab="Frequency",col="lightblue",
+  breaks=20,probability = T)
+  lines(density(Years.of.experience),col="red",lwd=2)
+  
+  histogram(~Years.of.experience|Specialty)
+  
+  boxplot(Years.of.experience)
+  text(1,mean(Years.of.experience),"*",cex=1.6,col="red")
+  
+  
+# Summary numbers for location, spread
+summary(tbad$Years.of.experience)
+
+ # Central tendency
+  # Calculate mean of variable:
+ mean(tbad$Years.of.experience)		
+  # Calculate median of variable:
+ median(tbad$Years.of.experience)		
+  # Calculate mode of variable
+  # Table needed to calculate mode: (not of primary interest)
+ tab<-table(tbad$Years.of.experience)	
+ as.numeric(names(tab)[tab==max(tab)])	
+ 
+  # Spread
+  # Calculate range of variable:
+ max(tbad$Years.of.experience)-min(tbad$Years.of.experience)	#range
+  # Calculate standard deviation of variable:
+ var(tbad$Years.of.experience)	
+ sd(tbad$Years.of.experience)	 	
+  # Calculate inter quartile range of variable: 
+  # several algorithms to calculate quantiles 
+  # (see help(IQR) to choose type)
+  # e.g. type=6 for SPSS-like IQR
+ IQR(tbad$Years.of.experience)		
+ IQR(tbad$Years.of.experience,type=6)  #different types of IQR
+
+```
+
+## Relative standings
+```{r}
+boxplot(log(Total.average.costs.per.patient.per.month))  #IQR*1.5, then you add that to upper quartile, points above that are potential outliers, you remove them from analysis, do analysis and look if there are different outcomes, then you include both analysis (not remove outliers because potential values)
+hist(Total.average.costs.per.patient.per.month)
+# Relative standing and outliers
+ average<-mean(tbad$Total.average.costs.per.patient.per.month)
+ s<-sd(tbad$Total.average.costs.per.patient.per.month)
+  ## Empirical rule:
+  # Interval containing about 70% of the data (actually 68%)
+  # (in unimodal, symmetric case)
+ c(average-s,average+s)			
+  # Interval containing about 95% of the data 
+  # (in unimodal, symmetric case)
+ c(average-2*s,average+2*s)			
+  # Interval containing about 99% of the data 
+  # (in unimodal, symmetric case)
+ c(average-3*s,average+3*s)			
+
+ hist(tbad$Total.average.costs.per.patient.per.month,
+  main="Histogram of average cost per month",
+  xlab="Total average cost per month",
+  ylab="Frequency")
+
+  # Calculate 1st quantile:
+ Q1<-quantile(tbad$Total.average.costs.per.patient.per.month,
+  probs=0.25)		
+  # Calculate 2nd quantile:
+  # median(tbad$Total.average.costs.per.patient.per.month) #OR
+ Q2<-quantile(tbad$Total.average.costs.per.patient.per.month,
+  probs=0.5)		
+  # Calculate 3rd quantile:
+ Q3<-quantile(tbad$Total.average.costs.per.patient.per.month,
+  probs=0.75)	
+  # calculate all at once
+ quantile(tbad$Total.average.costs.per.patient.per.month,
+  probs=c(0.25,0.5,0.75))
+ 
+  ## Boxplot rule:
+  # Interval that captures exactly 50% of the data:
+ c(Q1,Q3)															
+  # Interval that captures about 95% of the data:
+ c(Q2-1.5*IQR(tbad$Total.average.costs.per.patient.per.month),
+  Q2+1.5*IQR(tbad$Total.average.costs.per.patient.per.month))	
+  # Interval that captures about 99% of the data
+ c(Q1-1.5*IQR(tbad$Total.average.costs.per.patient.per.month),
+  Q3+1.5*IQR(tbad$Total.average.costs.per.patient.per.month))	
+
+ boxplot(tbad$Total.average.costs.per.patient.per.month,
+  main="Boxplot of average cost per month")
+  # zoom in on lower part
+ boxplot(tbad$Total.average.costs.per.patient.per.month,
+  main="Boxplot of average cost per month",
+  ylim=c(0,250))
 ```
 
