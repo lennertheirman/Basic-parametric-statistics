@@ -1,0 +1,40 @@
+---
+title: "Import data from Google sheets"
+author: "Abatih Emmanuel"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+# Set up packages
+```{r}
+# if (!require(googlesheets4)) install.packages("googlesheets4")
+# if (!require(googledrive)) install.packages("googledrive")
+# if (!require(tidyverse)) install.packages("tidyverse")
+
+library("googlesheets4")
+library("googledrive")
+library("tidyverse")
+```
+
+# Perform an Authentication
+
+Follow all steps until completion
+```{r}
+googledrive::drive_auth()
+```
+
+# Read in files
+## Read csv google sheet file
+```{r}
+## first open as a google sheet
+df <- read_sheet("https://docs.google.com/spreadsheets/d/1aYP9xZO7_-Uur39vDosDWbi1bvXk3n5L8MotIugLWGI/edit?gid=1134294672#gid=1134294672")
+
+head(df)
+```
+
+## Read SPSS data file
+
+Easiest way is to convert to .csv.
+
+
+
