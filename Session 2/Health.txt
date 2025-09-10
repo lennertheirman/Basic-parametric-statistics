@@ -1,0 +1,563 @@
+exercise,age,gender,bmi,profession,children
+130,49,female,normal,sitting,one or more
+146,39,female,normal,standing,none
+160,32,female,normal,sitting,one or more
+158,33,female,normal,standing,one or more
+165,38,female,normal,standing,one or more
+132,45,male,normal,sitting,none
+135,41,female,normal,standing,none
+159,38,female,normal,standing,one or more
+149,38,female,normal,none,none
+168,38,female,normal,sitting,one or more
+123,41,female,normal,sitting,none
+152,27,male,normal,sitting,none
+139,41,female,normal,standing,one or more
+164,33,female,normal,standing,none
+164,37,male,normal,standing,one or more
+127,34,male,high,sitting,one or more
+123,56,female,normal,sitting,none
+152,40,female,normal,sitting,none
+144,33,female,normal,sitting,one or more
+139,41,female,normal,standing,one or more
+133,42,female,normal,sitting,one or more
+170,44,male,normal,standing,none
+125,27,female,normal,sitting,one or more
+134,27,male,normal,sitting,none
+140,36,male,normal,none,one or more
+135,48,male,high,sitting,one or more
+171,45,male,normal,standing,one or more
+135,48,female,normal,sitting,one or more
+144,38,female,low,sitting,one or more
+167,32,female,normal,standing,one or more
+153,43,female,normal,standing,one or more
+139,51,female,normal,standing,one or more
+146,37,female,normal,sitting,one or more
+162,40,male,normal,standing,one or more
+148,36,male,normal,standing,one or more
+143,31,female,normal,standing,one or more
+146,43,female,normal,standing,one or more
+144,33,female,normal,standing,one or more
+146,42,male,normal,sitting,one or more
+159,41,male,high,standing,one or more
+178,35,female,normal,standing,one or more
+131,34,female,normal,sitting,one or more
+159,38,male,normal,sitting,none
+145,44,female,normal,none,one or more
+157,42,female,high,sitting,one or more
+150,33,female,normal,standing,one or more
+161,35,male,normal,sitting,one or more
+163,30,male,low,standing,none
+143,32,female,normal,sitting,one or more
+125,30,male,normal,sitting,none
+160,43,female,normal,none,one or more
+153,34,female,normal,none,none
+154,38,female,normal,none,one or more
+150,33,female,normal,standing,none
+136,43,female,normal,standing,one or more
+143,39,female,normal,standing,one or more
+129,33,female,normal,standing,one or more
+161,38,male,normal,standing,one or more
+146,39,male,normal,sitting,one or more
+167,33,male,normal,standing,none
+160,48,female,normal,none,one or more
+160,35,female,normal,standing,one or more
+139,37,male,normal,sitting,one or more
+129,38,male,normal,sitting,one or more
+171,41,female,normal,standing,none
+165,34,female,normal,standing,one or more
+136,39,male,high,standing,one or more
+143,27,female,normal,none,one or more
+133,39,female,normal,sitting,one or more
+156,34,female,normal,sitting,one or more
+135,40,female,normal,standing,one or more
+152,39,male,normal,standing,one or more
+144,48,male,normal,sitting,one or more
+166,36,male,normal,standing,one or more
+143,27,female,normal,sitting,one or more
+145,44,female,normal,standing,one or more
+136,35,female,normal,sitting,none
+163,33,female,normal,standing,none
+143,34,male,normal,sitting,none
+177,29,male,normal,standing,one or more
+136,43,male,normal,sitting,one or more
+161,28,female,normal,standing,one or more
+160,43,male,normal,standing,one or more
+161,40,female,normal,standing,one or more
+138,35,female,normal,sitting,one or more
+119,43,male,normal,sitting,none
+145,42,male,normal,sitting,one or more
+164,38,female,normal,standing,none
+146,41,male,normal,standing,one or more
+161,28,male,normal,standing,one or more
+144,42,male,normal,sitting,one or more
+164,35,female,normal,standing,one or more
+147,33,male,normal,standing,none
+156,40,male,normal,standing,none
+157,38,female,high,standing,one or more
+161,34,male,normal,standing,none
+139,27,female,normal,none,none
+177,41,female,normal,standing,one or more
+177,36,female,normal,standing,one or more
+172,34,female,low,standing,none
+148,44,male,normal,standing,none
+126,40,female,normal,sitting,one or more
+138,37,male,normal,sitting,one or more
+178,43,male,normal,standing,none
+145,36,female,low,none,one or more
+153,34,male,normal,none,one or more
+129,40,male,normal,none,none
+146,36,female,normal,standing,one or more
+168,23,female,normal,none,none
+160,22,female,normal,standing,none
+160,38,female,normal,none,none
+139,36,female,normal,sitting,none
+144,34,male,normal,standing,one or more
+142,38,female,normal,sitting,none
+161,34,male,low,sitting,one or more
+139,46,female,low,sitting,none
+126,30,female,normal,sitting,one or more
+143,34,female,normal,standing,one or more
+146,26,male,normal,standing,none
+141,34,female,normal,sitting,none
+135,37,male,normal,sitting,one or more
+132,32,male,normal,sitting,one or more
+141,47,female,high,standing,one or more
+133,45,female,normal,sitting,none
+142,35,female,normal,standing,one or more
+142,40,male,normal,sitting,one or more
+141,39,female,normal,sitting,one or more
+164,37,male,normal,standing,one or more
+178,22,male,normal,standing,none
+146,31,female,normal,sitting,one or more
+132,32,male,normal,sitting,one or more
+138,23,female,normal,none,one or more
+156,38,male,normal,none,none
+137,44,male,normal,sitting,one or more
+137,40,female,low,sitting,one or more
+144,38,female,normal,standing,none
+127,41,male,low,sitting,one or more
+143,31,female,normal,standing,one or more
+129,41,female,normal,standing,one or more
+127,44,female,normal,standing,one or more
+167,46,male,normal,standing,one or more
+160,27,male,normal,standing,one or more
+148,39,female,normal,standing,one or more
+132,45,female,normal,sitting,none
+114,45,female,normal,sitting,one or more
+148,41,male,normal,standing,one or more
+144,39,female,normal,sitting,none
+155,31,female,normal,standing,one or more
+137,28,male,normal,standing,one or more
+122,38,male,normal,sitting,one or more
+130,38,female,normal,sitting,none
+164,32,female,normal,standing,one or more
+167,28,male,low,standing,none
+165,33,female,normal,standing,one or more
+135,39,female,normal,sitting,none
+140,30,female,normal,sitting,none
+149,34,male,normal,standing,one or more
+144,36,male,normal,sitting,none
+145,39,female,normal,standing,one or more
+140,39,female,normal,standing,one or more
+142,38,female,normal,standing,one or more
+142,30,female,normal,none,one or more
+127,45,female,normal,sitting,none
+140,28,female,normal,sitting,none
+157,38,male,normal,standing,none
+152,36,male,normal,standing,one or more
+144,41,female,normal,sitting,none
+147,41,male,normal,sitting,one or more
+145,35,female,normal,sitting,one or more
+140,41,male,normal,sitting,none
+148,34,male,normal,standing,one or more
+141,36,female,normal,standing,none
+141,26,female,normal,sitting,one or more
+137,37,female,normal,none,none
+174,28,male,normal,standing,none
+138,45,female,normal,standing,none
+141,36,female,normal,standing,none
+139,42,female,normal,none,none
+144,34,male,normal,standing,one or more
+157,53,male,normal,none,none
+146,37,male,normal,standing,one or more
+152,30,female,normal,standing,none
+141,29,female,normal,sitting,one or more
+140,34,female,normal,sitting,one or more
+138,44,male,normal,standing,one or more
+153,25,male,normal,sitting,none
+143,28,female,normal,sitting,one or more
+154,46,female,low,none,none
+158,43,female,normal,standing,one or more
+173,32,female,normal,standing,none
+163,40,male,normal,standing,one or more
+157,35,female,normal,standing,one or more
+157,38,male,normal,standing,one or more
+136,39,female,normal,sitting,one or more
+141,29,male,normal,sitting,one or more
+140,39,female,normal,sitting,none
+150,39,female,low,standing,one or more
+139,49,female,normal,sitting,one or more
+144,30,female,normal,none,none
+154,40,male,normal,standing,one or more
+140,26,male,normal,sitting,one or more
+154,44,female,normal,standing,one or more
+155,43,female,normal,standing,one or more
+126,29,female,normal,sitting,one or more
+160,37,female,normal,standing,one or more
+156,30,male,normal,sitting,none
+156,34,female,normal,none,one or more
+141,42,female,normal,standing,none
+145,25,female,normal,sitting,one or more
+149,36,male,normal,sitting,one or more
+137,35,female,normal,standing,none
+169,30,male,normal,standing,one or more
+149,34,female,normal,standing,one or more
+136,45,female,normal,standing,one or more
+146,39,female,normal,standing,none
+152,37,male,low,none,one or more
+131,28,female,normal,sitting,none
+138,47,male,low,standing,one or more
+133,32,female,normal,standing,none
+126,44,female,normal,sitting,one or more
+154,29,female,normal,standing,none
+143,32,female,normal,standing,one or more
+125,43,female,normal,standing,one or more
+161,30,female,normal,standing,one or more
+166,33,female,normal,standing,one or more
+133,47,male,normal,sitting,one or more
+137,36,male,low,sitting,one or more
+145,32,female,low,standing,one or more
+139,41,male,normal,standing,one or more
+137,45,female,low,standing,one or more
+165,36,female,normal,standing,one or more
+153,25,female,normal,standing,one or more
+165,31,female,normal,none,one or more
+146,36,male,normal,sitting,none
+158,40,male,normal,standing,one or more
+133,44,female,normal,standing,one or more
+130,43,female,normal,sitting,one or more
+158,38,male,normal,standing,one or more
+131,31,male,normal,sitting,none
+146,32,female,normal,sitting,one or more
+154,40,male,normal,standing,one or more
+156,37,female,normal,none,one or more
+143,31,male,normal,sitting,one or more
+173,32,female,normal,standing,one or more
+133,39,male,normal,none,one or more
+154,36,male,normal,sitting,none
+149,43,male,normal,standing,none
+126,29,male,normal,sitting,one or more
+172,35,female,normal,standing,none
+134,33,female,normal,sitting,one or more
+129,33,female,normal,standing,one or more
+137,46,male,normal,sitting,one or more
+150,27,female,normal,standing,one or more
+145,35,female,normal,sitting,one or more
+172,38,female,normal,standing,one or more
+119,47,male,normal,standing,one or more
+127,45,male,normal,none,one or more
+182,25,female,normal,standing,one or more
+154,34,female,normal,standing,one or more
+136,38,male,normal,standing,one or more
+144,37,male,normal,sitting,one or more
+153,50,male,normal,standing,one or more
+135,34,female,low,sitting,one or more
+150,38,female,high,standing,one or more
+131,36,male,normal,sitting,one or more
+153,43,female,normal,standing,one or more
+149,38,male,normal,sitting,none
+129,45,male,normal,standing,one or more
+145,37,female,normal,standing,one or more
+169,38,female,normal,standing,one or more
+134,38,female,normal,sitting,one or more
+165,31,female,normal,standing,none
+173,26,male,normal,standing,none
+121,61,female,normal,standing,one or more
+149,37,male,normal,sitting,none
+136,41,female,normal,sitting,one or more
+167,37,male,normal,standing,one or more
+156,38,female,normal,standing,one or more
+136,28,female,normal,sitting,none
+123,34,female,normal,sitting,one or more
+140,41,female,normal,standing,none
+143,34,male,normal,standing,one or more
+167,37,female,normal,none,one or more
+146,25,female,normal,sitting,one or more
+125,41,male,normal,sitting,none
+152,33,female,normal,none,one or more
+144,39,female,normal,sitting,one or more
+119,53,female,normal,standing,one or more
+159,37,female,normal,standing,none
+153,42,female,normal,standing,one or more
+170,42,male,normal,standing,none
+150,44,female,normal,standing,one or more
+142,31,female,normal,standing,none
+165,28,female,normal,standing,none
+123,44,female,normal,sitting,one or more
+160,36,female,normal,standing,one or more
+143,50,female,normal,sitting,one or more
+166,37,male,normal,standing,one or more
+171,24,female,normal,standing,none
+108,41,male,normal,sitting,one or more
+130,30,male,normal,sitting,none
+145,38,male,low,standing,one or more
+133,45,male,normal,none,one or more
+145,31,male,normal,standing,one or more
+146,43,female,normal,sitting,one or more
+137,35,female,normal,sitting,none
+153,43,male,normal,sitting,one or more
+119,44,female,normal,standing,none
+149,26,female,normal,sitting,one or more
+152,28,female,normal,sitting,none
+133,29,female,normal,sitting,none
+132,40,female,normal,standing,one or more
+158,31,female,normal,standing,one or more
+164,39,female,normal,sitting,one or more
+146,36,female,low,sitting,one or more
+163,33,male,normal,standing,one or more
+152,37,female,normal,sitting,one or more
+146,36,female,normal,standing,one or more
+108,46,male,normal,sitting,one or more
+169,34,female,normal,standing,none
+150,46,male,normal,sitting,one or more
+147,36,female,low,sitting,none
+127,44,female,normal,sitting,one or more
+147,37,female,normal,standing,one or more
+152,32,male,low,standing,one or more
+132,39,female,normal,sitting,one or more
+156,30,female,normal,standing,one or more
+133,28,male,normal,sitting,none
+148,34,female,normal,standing,one or more
+148,41,female,normal,sitting,one or more
+172,41,male,normal,standing,one or more
+149,33,female,normal,standing,none
+131,34,female,normal,sitting,one or more
+146,45,male,low,standing,one or more
+147,34,male,normal,standing,one or more
+151,31,female,normal,none,one or more
+145,33,female,normal,standing,one or more
+147,27,male,normal,sitting,none
+149,26,female,normal,standing,one or more
+145,18,female,normal,standing,none
+147,27,female,low,standing,none
+139,41,female,normal,sitting,one or more
+144,35,male,normal,sitting,none
+169,40,male,normal,standing,one or more
+146,45,female,normal,standing,one or more
+150,35,male,normal,sitting,one or more
+136,43,female,normal,standing,one or more
+148,35,female,normal,standing,one or more
+136,46,female,normal,standing,one or more
+152,31,male,normal,standing,none
+150,36,female,normal,sitting,one or more
+139,43,female,normal,standing,one or more
+146,34,male,normal,none,one or more
+150,30,female,normal,sitting,none
+165,38,male,normal,standing,none
+132,37,female,normal,standing,one or more
+140,47,female,normal,sitting,one or more
+139,36,female,normal,sitting,none
+152,40,female,low,none,none
+166,41,female,normal,standing,one or more
+137,33,male,normal,sitting,none
+151,39,female,normal,sitting,none
+147,32,female,low,sitting,one or more
+132,40,female,normal,sitting,one or more
+166,28,male,high,standing,one or more
+156,41,female,normal,standing,none
+149,38,female,normal,sitting,one or more
+152,32,female,normal,sitting,one or more
+144,39,female,normal,none,one or more
+149,36,female,normal,standing,one or more
+162,43,male,normal,standing,one or more
+143,25,female,normal,standing,none
+134,29,male,normal,sitting,one or more
+169,47,male,normal,standing,one or more
+154,37,female,normal,standing,none
+133,33,female,normal,sitting,one or more
+140,35,female,low,standing,one or more
+157,21,male,normal,standing,one or more
+141,32,female,low,standing,one or more
+122,46,female,normal,sitting,one or more
+136,39,female,normal,standing,none
+147,40,female,normal,sitting,one or more
+136,53,female,normal,none,one or more
+153,31,male,normal,sitting,one or more
+154,31,female,normal,standing,one or more
+142,37,female,normal,sitting,none
+128,42,male,normal,sitting,one or more
+149,41,female,low,sitting,one or more
+151,47,female,normal,standing,none
+132,30,male,normal,sitting,none
+141,33,male,normal,sitting,one or more
+154,42,male,normal,standing,none
+143,45,female,normal,standing,none
+143,37,female,normal,sitting,one or more
+153,33,female,normal,sitting,one or more
+158,41,male,normal,standing,none
+152,31,male,normal,none,none
+131,42,female,normal,sitting,none
+154,40,male,normal,standing,one or more
+149,49,female,normal,standing,one or more
+138,39,female,normal,sitting,one or more
+126,48,male,normal,none,one or more
+147,45,female,normal,sitting,one or more
+147,38,female,normal,standing,none
+132,31,male,normal,sitting,one or more
+151,47,female,normal,sitting,none
+141,35,male,normal,standing,one or more
+141,45,male,normal,sitting,none
+140,32,female,normal,sitting,one or more
+164,45,female,normal,sitting,one or more
+144,41,female,normal,none,one or more
+143,42,female,normal,standing,one or more
+149,33,female,normal,sitting,one or more
+160,37,male,normal,sitting,one or more
+127,42,male,normal,sitting,none
+148,36,male,normal,sitting,one or more
+136,49,female,normal,standing,one or more
+168,32,male,normal,standing,one or more
+140,37,female,low,sitting,one or more
+139,41,male,normal,sitting,one or more
+159,31,female,normal,standing,one or more
+163,33,male,normal,none,one or more
+156,36,female,normal,sitting,one or more
+169,28,female,normal,standing,none
+173,29,female,normal,standing,none
+125,36,female,normal,standing,none
+117,48,male,normal,sitting,one or more
+145,33,female,normal,sitting,one or more
+129,43,female,normal,standing,none
+156,49,male,high,none,one or more
+151,37,female,normal,standing,one or more
+161,31,female,normal,standing,one or more
+136,37,female,normal,standing,one or more
+142,41,male,normal,sitting,none
+137,41,female,normal,none,none
+162,48,male,normal,standing,one or more
+141,45,female,high,sitting,none
+134,27,male,normal,sitting,one or more
+146,37,female,normal,standing,none
+149,34,male,normal,standing,none
+153,27,female,normal,sitting,none
+120,47,female,normal,sitting,one or more
+152,42,male,normal,standing,one or more
+142,33,female,normal,standing,one or more
+147,33,female,normal,standing,one or more
+149,36,female,normal,standing,none
+156,27,female,normal,sitting,none
+129,40,female,normal,sitting,none
+146,49,male,normal,none,one or more
+153,32,female,normal,sitting,one or more
+141,27,female,normal,sitting,one or more
+145,36,female,normal,standing,one or more
+144,34,male,normal,sitting,one or more
+153,41,female,normal,standing,one or more
+138,31,male,high,sitting,none
+126,38,female,normal,standing,one or more
+144,35,female,normal,standing,one or more
+143,47,male,normal,none,one or more
+140,32,male,normal,standing,one or more
+149,44,male,normal,standing,one or more
+164,31,female,normal,standing,one or more
+134,42,female,normal,standing,one or more
+178,36,female,normal,standing,none
+157,41,female,normal,none,none
+146,32,male,normal,standing,one or more
+154,39,female,normal,standing,one or more
+158,42,female,normal,sitting,one or more
+157,33,female,normal,standing,one or more
+143,33,male,normal,none,one or more
+150,33,male,normal,sitting,none
+145,47,male,normal,standing,one or more
+136,32,male,normal,sitting,one or more
+143,37,female,normal,sitting,one or more
+147,40,female,normal,standing,one or more
+148,46,female,normal,standing,none
+142,43,male,normal,sitting,one or more
+166,34,male,normal,standing,none
+156,45,male,normal,sitting,one or more
+142,36,female,normal,sitting,none
+159,42,male,normal,standing,one or more
+126,36,female,normal,sitting,one or more
+139,38,male,normal,standing,one or more
+141,32,female,high,standing,none
+167,44,male,normal,standing,one or more
+138,37,female,normal,sitting,none
+145,35,female,normal,sitting,none
+145,29,male,normal,sitting,none
+150,30,male,low,sitting,none
+167,37,male,normal,standing,none
+156,33,female,normal,sitting,one or more
+170,27,male,normal,standing,none
+137,40,female,high,sitting,none
+136,38,female,normal,standing,one or more
+145,41,female,normal,sitting,one or more
+119,42,female,normal,sitting,none
+163,42,male,normal,standing,one or more
+133,34,female,normal,sitting,one or more
+128,43,female,normal,sitting,none
+149,29,male,normal,sitting,none
+157,31,female,normal,sitting,none
+130,37,male,normal,sitting,one or more
+150,34,male,normal,sitting,none
+153,36,female,normal,sitting,one or more
+127,38,male,normal,sitting,one or more
+141,36,female,low,sitting,one or more
+142,31,male,normal,sitting,one or more
+134,40,male,normal,standing,none
+130,29,male,normal,sitting,one or more
+138,37,female,normal,standing,none
+150,33,female,normal,sitting,one or more
+158,28,male,normal,standing,none
+159,34,female,normal,standing,one or more
+135,49,female,normal,sitting,one or more
+134,46,male,high,sitting,one or more
+169,37,male,normal,standing,none
+149,43,female,normal,standing,none
+161,35,female,normal,standing,none
+135,41,male,normal,sitting,one or more
+161,38,female,normal,none,one or more
+144,37,male,normal,sitting,one or more
+145,37,male,low,sitting,one or more
+156,27,female,normal,sitting,none
+140,64,male,normal,sitting,one or more
+146,31,male,normal,none,one or more
+150,36,male,normal,sitting,one or more
+135,34,male,normal,sitting,none
+134,47,male,normal,standing,none
+148,32,female,normal,standing,one or more
+132,38,male,normal,sitting,one or more
+144,38,female,normal,standing,one or more
+139,39,male,normal,standing,one or more
+118,37,female,normal,sitting,one or more
+118,42,female,normal,sitting,none
+157,36,male,normal,standing,none
+148,30,male,normal,standing,none
+160,26,male,normal,standing,none
+128,46,female,low,sitting,one or more
+146,37,male,normal,sitting,one or more
+143,34,male,normal,standing,one or more
+159,35,female,normal,standing,one or more
+147,39,male,normal,sitting,none
+138,31,male,normal,sitting,none
+143,45,male,normal,none,one or more
+159,41,female,low,standing,one or more
+140,38,female,normal,standing,one or more
+153,44,male,normal,standing,one or more
+146,42,female,normal,sitting,none
+142,51,female,normal,standing,one or more
+149,40,female,normal,standing,one or more
+134,43,female,normal,standing,one or more
+156,25,male,normal,none,one or more
+130,44,female,normal,none,none
+165,30,male,normal,standing,none
+153,43,female,normal,standing,one or more
+162,30,female,normal,standing,one or more
+162,43,female,normal,none,none
+143,35,female,normal,standing,none
+144,42,male,normal,sitting,none
+146,42,male,normal,standing,one or more
+182,32,male,normal,standing,none
+163,38,male,normal,standing,none
+138,32,female,normal,standing,one or more
