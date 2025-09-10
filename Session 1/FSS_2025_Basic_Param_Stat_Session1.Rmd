@@ -17,7 +17,7 @@ library(lattice)
 
 # Import Data Set
 ```{r}
-tbad <- library(readr)
+library(readr)
 tbad <- read.delim("TBAD.txt")
 head(tbad)
 View(tbad)
@@ -186,5 +186,179 @@ hist(Total.average.costs.per.patient.per.month)
  boxplot(tbad$Total.average.costs.per.patient.per.month,
   main="Boxplot of average cost per month",
   ylim=c(0,250))
+```
+
+## One sample test
+```{r}
+# For purpose of illustration: select subset of data, containing
+# only doctors with specialty Family Practice
+costPatientFp<-tbad$Total.average.costs.per.patient.per.month[tbad$Specialty=="fp"]
+
+histogram(costPatientFp)
+hist(costPatientFp)
+boxplot(costPatientFp)  #skewed to the right
+library(e1071)
+skewness(costPatientFp)
+kurtosis(costPatientFp)
+
+# Read confidence interval and compare with total average cost
+t.test(costPatientFp)			
+
+# By default test for mu=0
+# Add argument to perform t-test for mu=103  
+t.test(costPatientFp,mu=103)	
+# By default test is two-sided				
+# Add argument to perform one-sided test
+t.test(costPatientFp,mu=103,alternative='less')		
+# Note that confidence interval changes!
+
+## A continuous variable over categories
+# use ~ to create multiple boxplots
+boxplot(tbad$Total.average.costs.per.patient.per.month~tbad$Specialty,
+ ylab="Average cost per patient per month")
+boxplot(tbad$Total.average.costs.per.patient.per.month~tbad$Specialty,
+ ylab="Average cost per patient per month",
+ ylim=c(-100,420))  #limit the y axis because outliers make it difficult to really say something about data
+
+# summary numbers computed by category:
+tapply(tbad$Total.average.costs.per.patient.per.month, 
+ tbad$Specialty, summary)
+
+histogram(~Total.average.costs.per.patient.per.month|Specialty) #everything is skewed
+
+# std. dev. by category:
+tapply(tbad$Total.average.costs.per.patient.per.month, 
+ tbad$Specialty, sd)
+
+## Two sample inferences: the mean
+# Select costs only for doctors who studied in USA
+costUSA<-tbad$Total.average.costs.per.patient.per.month[tbad$Medical.school=="USA"]
+# Select costs only for doctors who studied in foreign country
+costFor<-tbad$Total.average.costs.per.patient.per.month[tbad$Medical.school=="Foreign"]
+# Check equality of variances:
+# remark difference F-test <-> Levene's test!!! 
+# (cfr class 3)
+var.test(costUSA,costFor)	
+hist(costUSA)
+shapiro.test(costUSA)
+hist(costFor)
+shapiro.test(costFor)
+# Change var.equal option, depending on result of variance test
+t.test(costUSA,costFor, var.equal=F)
+
+# Select costs only for doctors without secondary specialty
+costSecSpec0<-tbad$Total.average.costs.per.patient.per.month[tbad$Secondary.specialty=="no"]
+# Select costs only for doctors with secondary specialty
+costSecSpec1<-tbad$Total.average.costs.per.patient.per.month[tbad$Secondary.specialty=="yes"]
+# Check equality of variances:
+# remark difference F-test <-> Levene's test!!! 
+# (cfr class 3)
+var.test(costSecSpec0,costSecSpec1)
+# Change var.equal option, depending on result of variance test
+# based on Levene's test (see Part 3) we assume equal variances
+t.test(costSecSpec0,costSecSpec1, var.equal=T)		# Change var.equal option, depending on result of variance test
+
+## Paired t-test
+measures<-read.table("MEASURES.TXT",sep="\t",header=T) 
+# Perform a paired t-test for dependent measures:
+t.test(measures$Before,measures$After,paired=T)		
+```
+
+# Excercise 1.2
+a)	Analyze the frequency table for the variable sex to see that both groups are well represented.
+```{r}
+library(haven)
+BP <- read_sav("BP.sav")
+head(BP)
+View(BP)
+
+table(BP$Sex)
+prop.table(table(BP$Sex))  #is this balanced or not?
+barplot(prop.table(table(BP$Sex))) #not really balanced so correct for this
+
+barplot(table(BP$RiskSystolic))
+100*prop.table(table(BP$RiskSystolic))
+barplot(100*prop.table(table(BP$RiskSystolic)),ylim=c(0,30))
+
+hist(BP$RiskSystolic)
+hist(BP$RiskDiastolic)
+
+boxplot(BP$KorotkoffLASys~BP$Sex)
+boxplot(BP$KorotkoffLADias~BP$Sex)
+
+boxplot(BP$KorotkoffLASys~BP$RiskSystolic)
+boxplot(BP$KorotkoffLADias~BP$RiskDiastolic)
+
+
+KorLASysF <- BP$KorotkoffLASys[BP$Sex=="F"]
+KorLASysF
+KorLASysM <- BP$KorotkoffLASys[BP$Sex=="M"]
+KorLASysM
+
+hist(KorLASysF)
+shapiro.test(KorLASysF)
+summary(KorLASysF)
+
+hist(KorLASysM)
+shapiro.test(KorLASysM)
+Summary(KorLASysM)
+
+var.test(KorLASysF,KorLASysM)
+```
+b)	How are the patients distributed over the risk categories?
+```{r}
+barplot(table(BP$RiskSystolic))
+100*prop.table(table(BP$RiskSystolic))
+barplot(100*prop.table(table(BP$RiskSystolic)),ylim=c(0,30))
+```
+
+c)	Explore the boxplot of the Korotkoff scores to check differences among sex.
+```{r}
+attach(BP)
+boxplot(KorotkoffLASys~Sex) #median slightly higher females, IQR seems to be similar, 
+
+tapply(KorotkoffLASys,Sex,hist)
+tapply(KorotkoffLASys,Sex,shapiro.test)
+lkortosys <- log10(KorotkoffLASys+1)
+tapply(lkortosys,Sex,shapiro.test)  #normality holds on a log level
+### test for equality of variances
+var.test(KorotkoffLASys~Sex)
+var.test(lkortosys~Sex)
+ #variances are equal, also on log level
+t.test(lkortosys~Sex,var.equal=T)  #var.equal bcs variances are equeal, otherwise R uses welch test
+    ## not enough evidence to see that they are different
+
+
+boxplot(KorotkoffLADias~Sex)
+tapply(KorotkoffLADias,Sex,hist)
+tapply(KorotkoffLADias,Sex,shapiro.test) #normality ok so we dont need to transform
+
+var.test(KorotkoffLADias~Sex) #variances equal
+t.test(KorotkoffLADias~Sex,var.equal=T)  #var.equal bcs variances are equeal, otherwise R uses welch test
+    ## not enough evidence to see that they are different
+
+##alternatives
+wilcox.test(KorotkoffLASys~Sex)
+wilcox.test(KorotkoffLADias~Sex)
+  #in case of outliers we can go to nonparam as then its more robust and for small samples sizes more robust
+
+
+```
+
+d)	Explore the boxplot of the Korotkoff scores over the risk groups for a visual analysis.
+```{r}
+boxplot(BP$KorotkoffLASys~BP$RiskSystolic) #no normality so we cannot talk about mean, we can talk about the median, there is clearly a gradient so we can safely use this risk categorisation
+```
+
+f)	Based on the boxplot over the risk categories, do you agree with the risk groups assessment of the physicians? Where would you define the boundaries for a good blood pressure?
+g)	Do you agree that the patients do not deviate significantly from their long term mean blood pressure?
+```{r}
+t.test(KorotkoffLASys,LongTermMeanSys,paired=T)
+diffcore=KorotkoffLASys-LongTermMeanSys
+diffcore
+hist(diffcore)
+shapiro.test(diffcore)  #not normally distr
+
+wilcox.test(KorotkoffLASys,LongTermMeanSys,paired=T) #more powerful
 ```
 
